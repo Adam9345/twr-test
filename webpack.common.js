@@ -27,14 +27,10 @@ const config = {
       }
     ]
   },
-  mode: "development",
+  mode: "production",
   plugins: [
     new htmlWebpackPlugin({
       template: path.resolve(__dirname, "public", "index.html")
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-    new tslintWebpackPlugin({
-      files: ["./src/**/*.ts", "./src/**/*.tsx"]
     })
   ]
 };

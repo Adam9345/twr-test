@@ -21,6 +21,11 @@ const config = {
         loader: "ts-loader"
       },
       {
+        enforce: "pre",
+        test: /\.js$/,
+        loader: "source-map-loader"
+      },
+      {
         test: /\.(css|scss)$/,
         use: ["style-loader", "css-loader", "sass-loader"]
       }

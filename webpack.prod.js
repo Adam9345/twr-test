@@ -1,9 +1,12 @@
 const merge = require("webpack-merge");
 const common = require("./webpack.common.js");
 
+process.env.NODE_ENV = "production";
+
 module.exports = merge(common, {
   entry: {
     app: ["./src/index.tsx"]
   },
-  mode: "production"
+  mode: "production",
+  devtool: "source-map"
 });

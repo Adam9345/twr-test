@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "homepage": "https://adam9345.github.io/twr-test",
   "scripts": {
     "build": "node_modules/.bin/webpack",
-    "start": "yarn build && node server"
+    "start": "yarn build && node server",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "express": "^4.16.3",
+    "gh-pages": "^2.0.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "tslint": "^5.11.0",

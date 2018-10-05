@@ -31,7 +31,6 @@ const config = {
       }
     ]
   },
-  mode: "production",
   plugins: [
     new htmlWebpackPlugin({
       template: path.resolve(__dirname, "public", "index.html")

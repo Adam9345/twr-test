@@ -5,7 +5,6 @@ const tslintWebpackPlugin = require("tslint-webpack-plugin");
 
 const config = {
   entry: {
-    app: ["./src/index.tsx", "webpack-hot-middleware/client"],
     vendor: ["react", "react-dom"]
   },
   output: {

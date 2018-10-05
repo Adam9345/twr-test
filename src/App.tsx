@@ -5,7 +5,11 @@ class App extends React.Component {
   public render() {
     return (
       <React.Fragment>
-        <Hello compiler="TypeScript" framework="React" bundler="Webpack" />
+        <Hello
+          compiler="TypeScriptzxczxc"
+          framework="React"
+          bundler="Webpack"
+        />
       </React.Fragment>
     );
   }

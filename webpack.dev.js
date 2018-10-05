@@ -3,11 +3,12 @@ const webpack = require("webpack");
 const tslintWebpackPlugin = require("tslint-webpack-plugin");
 const common = require("./webpack.common.js");
 
-process.env.NODE_ENV = "development";
-
 module.exports = merge(common, {
   entry: {
     app: ["./src/index.tsx", "webpack-hot-middleware/client"]
+  },
+  output: {
+    publicPath: "/"
   },
   mode: "development",
   devtool: "inline-source-map",

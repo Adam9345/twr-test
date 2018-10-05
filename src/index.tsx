@@ -11,3 +11,6 @@ if (process.env.NODE_ENV === "development") {
     module.hot.accept();
   }
 }
+
+// tslint:disable:no-console
+console.log(`You are running ${process.env.NODE_ENV} version`);

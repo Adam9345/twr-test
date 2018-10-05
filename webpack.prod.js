@@ -1,11 +1,13 @@
 const merge = require("webpack-merge");
 const common = require("./webpack.common.js");
-
-process.env.NODE_ENV = "production";
+const uglifyjsWebpackPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = merge(common, {
   entry: {
     app: ["./src/index.tsx"]
+  },
+  optimization: {
+    minimizer: [new uglifyjsWebpackPlugin()]
   },
   mode: "production",
   devtool: "source-map"

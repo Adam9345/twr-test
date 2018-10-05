@@ -1,7 +1,5 @@
 const path = require("path");
-const webpack = require("webpack");
 const htmlWebpackPlugin = require("html-webpack-plugin");
-const tslintWebpackPlugin = require("tslint-webpack-plugin");
 
 const config = {
   entry: {
@@ -18,6 +16,8 @@ const config = {
     rules: [
       {
         test: /\.(ts|tsx)$/,
+        include: path.resolve(__dirname, "src"),
+        exclude: /node_modules/,
         loader: "ts-loader"
       },
       {
@@ -27,6 +27,7 @@ const config = {
       },
       {
         test: /\.(css|scss)$/,
+        include: path.resolve(__dirname, "src"),
         use: ["style-loader", "css-loader", "sass-loader"]
       }
     ]
